@@ -276,11 +276,11 @@ update () {
             # render wallpaper at each display size
             resize_and_render $USER_WALL $DPATH ${DRES[0]}
             # add to parameters for position on canvas
-            PARAM_RESIZE="$PARAM_RESIZE $RES_RESIZE -geometry $DPOS -composite "
-            PARAM_DIM="$PARAM_DIM $RES_DIM -geometry $DPOS -composite "
-            PARAM_BLUR="$PARAM_BLUR $RES_BLUR -geometry $DPOS -composite "
-            PARAM_DIMBLUR="$PARAM_DIMBLUR $RES_DIMBLUR -geometry $DPOS -composite "
-            PARAM_PIXEL="$PARAM_PIXEL $RES_PIXEL -geometry $DPOS -composite "
+            PARAM_RESIZE="$PARAM_RESIZE $RES_RESIZE -geometry $DPOS -colorspace sRGB -composite "
+            PARAM_DIM="$PARAM_DIM $RES_DIM -geometry $DPOS -colorspace sRGB -composite "
+            PARAM_BLUR="$PARAM_BLUR $RES_BLUR -geometry $DPOS -colorspace sRGB -composite "
+            PARAM_DIMBLUR="$PARAM_DIMBLUR $RES_DIMBLUR -geometry $DPOS -colorspace sRGB -composite "
+            PARAM_PIXEL="$PARAM_PIXEL $RES_PIXEL -geometry $DPOS -colorspace sRGB -composite "
         fi
 
     done
